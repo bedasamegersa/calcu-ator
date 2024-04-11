@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registeration form</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600;700&display=swap');
+
+        
+body{
+    background-color: rgb(26, 141, 95);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body,
+input{
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    position:relative;
+    width: 100%;
+    background-color: rgba(225, 214, 214, 0.71);
+    min-height: 100vh;
+    overflow:hidden;
+
+}
+.forms-container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top:-10%;
+    right:48%;
+    background-image: linear-gradient(-45deg,#20dbc2 0%,#00bfa6 100%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition:1.8s ease-in-out;
+    
+}
+from{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    padding:0 5rem;
+    padding:0 5rem;
+    grid-column:1/2 ;
+    
+    grid-row: 1/2;
+    
+}
+.title{
+    font-size:2.2rem;
+    color:aquamarine;
+    margin-bottom: 10px;
+}
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: rgb(141, 162, 162);
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+
+}
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    color: rgb(131, 88, 36);
+    font: size 1.5rem;
+}
+.input-field input{
+    background: none;
+    outline: none;
+    border:none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:antiquewhite
+}
+.input-field input:placeholder-shown{
+    color:rgb(212, 20, 49)
+    
+}
+.btn{
+    width: 150px;
+    height: 49px;
+    outline: none;
+    border: none;
+    border-radius: 480px;
+    background-color: rgb(31, 214, 46);
+    color: aliceblue;
+    text-transform: uppercase;
+
+}
+.btn:hover{
+    background-color: rgb(168, 143, 165);
+}
+.signin-signup{
+    position:absolute;
+    top:50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    
+
+}
+form.sign-in-form{
+    z-index: 2;
+
+}
+form.sign-up-form{
+    z-index:1 ;
+    opacity: 0;
+
+}
+.panels-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 7;
+
+}
+.left-panel{
+    padding: 11rem 1% 100rem 160%;
+}
+.right-panel{
+    padding: 1rem 12% 1rem 30%;
+}
+.panel.content{
+    color:rgb(171, 205, 19);
+    transition:.9s.6s ease-in-out;
+}
+.panel h3{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+.btn.transparent{
+    margin: 0;
+    background: none;
+    border: 2px solid #ffff;
+    width:130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.right-panel.content{
+    transition: translateX(800px);
+}
+.container.sign-up-mode::before{
+    transform: translate(100%,-50%);
+    right: 52%;
+}
+.container.sign-up-mode.left-panel{
+    pointer-events: none;
+
+}
+.container.sign-up-mode.right-panel{
+    pointer-events: all;
+}
+.container.sign-up-mode.signin-signup{
+    left: 25%;
+}
+.container.sign-up-mode.sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+.container.sign-up-mode.sign-up-form{
+    z-index: 2;
+    opacity: 1;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 class="tittle"> the beautiful project on html for to develop sth</h1>
+    <div class="container">
+    <div class="froms-container">
+    <div class="singn-signup">
+        <form action="#" class="sign-in-from">
+            <h2 class="title">sign in</h2>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" placeholder="username"/>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" placeholder="password"/>
+            </div>
+            <input type="submit" class="btn solid" value="login"/>
+            <p class="social-media">or sign in with social platforms</p>
+            <div class="social-media">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+            </div>
+        </form>
+        
+    </div>
+    
+    <div class="singn-signup">
+        <form action="#" class="sign-up-from">
+            <h2 class="title">sign up</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="username"/>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-evelope"></i>
+                <input type="email" placeholder="Email"/>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" placeholder="password"/>
+            </div>
+            <input type="submit" class="btn solid" value="login"/>
+        
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+            </form>
+        </div>
+        
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New Here?</h3>
+                    <p>
+
+
+        
+        
+
+        
+    </div>
+    
+    
+    
+
+    </div>
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New Here?</h3>
+                <p>
+                    lorem ipsum dolor sit amet consectetur,adipisicing elit.ducimus ab ipsam deserunt vero.
+                </p>
+                <button class="btn trasparent" id="sign-up-button">sign up</button>
+        
+            </div>
+
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>One of us</h3>
+                <p>
+                    lorem ipsum dolor sit amet consectetur,adipisicing elit.ducimus ab ipsam deserunt vero.
+                </p>
+                <button class="btn trasparent" id="sign-in-button">sign In</button>
+        
+            </div>
+
+        </div>
+    </div>
+    
+
+    </div>
+    <script src="script.js"></script>
+    
+    
+    
+</body>
+</html>
